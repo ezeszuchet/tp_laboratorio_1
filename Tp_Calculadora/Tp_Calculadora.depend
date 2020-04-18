@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1587221465 source:d:\eze\utn\laboratorio 1\tp_calculadora\calculadora.c
+	<stdio.h>
+	<stdlib.h>
+	"calculadora.h"
+
+1587123358 d:\eze\utn\laboratorio 1\tp_calculadora\calculadora.h
+
+1586713271 source:d:\eze\utn\laboratorio 1\tp_calculadora\main.c
+	<stdio.h>
+	<stdlib.h>
+	"calculadora.h"
+
+1587122739 source:d:\eze\utn\laboratorio 1\tp_calculadora\operaciones.c
+	<stdio.h>
+	<stdlib.h>
+	"calculadora.h"
+
+1586713271 source:d:\eze\utn\laboratorio 1\tp_laboratorio_1\tp_calculadora\main.c
+	<stdio.h>
+	<stdlib.h>
+	"calculadora.h"
+
+1587123358 d:\eze\utn\laboratorio 1\tp_laboratorio_1\tp_calculadora\calculadora.h
+
+1587122739 source:d:\eze\utn\laboratorio 1\tp_laboratorio_1\tp_calculadora\operaciones.c
+	<stdio.h>
+	<stdlib.h>
+	"calculadora.h"
+
