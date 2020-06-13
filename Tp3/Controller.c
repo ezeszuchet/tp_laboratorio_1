@@ -7,6 +7,36 @@
 #include "Validation.h"
 
 
+int controller_findLastId(LinkedList* pArrayListEmployee)
+{
+    Employee* pEmployee;
+    int i;
+    int idMayor = 0;
+    int idEmployee;
+    int tamLista;
+
+    if(pArrayListEmployee != NULL)
+    {
+        tamLista = ll_len(pArrayListEmployee);
+        if(!tamLista > 0)
+        {
+            idMayor = 0;
+        }else
+        {
+            for(i = 0; i < tamLista; i++)
+            {
+                pEmployee = ll_get(pArrayListEmployee, i);
+                employee_getId(pEmployee, &idEmployee);
+                if(idEmployee > idMayor)
+                {
+                    idMayor = idEmployee;
+                }
+            }
+        }
+    }
+    return idMayor;
+}
+
 
 int controller_loadFromText(char* path, LinkedList* pArrayListEmployee)
 {
@@ -39,37 +69,6 @@ int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
     }
     fclose(pArchivo);
     return error;
-}
-
-
-int controller_findLastId(LinkedList* pArrayListEmployee)
-{
-    Employee* pEmployee;
-    int i;
-    int idMayor = 0;
-    int idEmployee;
-    int tamLista;
-
-    if(pArrayListEmployee != NULL)
-    {
-        tamLista = ll_len(pArrayListEmployee);
-        if(!tamLista > 0)
-        {
-            idMayor = 0;
-        }else
-        {
-            for(i = 0; i < tamLista; i++)
-            {
-                pEmployee = ll_get(pArrayListEmployee, i);
-                employee_getId(pEmployee, &idEmployee);
-                if(idEmployee > idMayor)
-                {
-                    idMayor = idEmployee;
-                }
-            }
-        }
-    }
-    return idMayor;
 }
 
 int controller_addEmployee(LinkedList* pArrayListEmployee)
